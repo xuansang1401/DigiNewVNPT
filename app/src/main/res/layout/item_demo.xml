@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="data"
+            type="com.gpaddy.baseandroid.data.model.api.NewsModel" />
+        <variable
+            name="onClickItem"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:divider="?android:dividerHorizontal"
+        android:onClick="@{onClickItem}"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:showDividers="middle"
+        android:layout_margin="@dimen/keyline_2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            imageFromUrl="@{data.m}"
+            android:textColor="@color/purple_700" />
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@{data.t}"
+                android:textSize="16sp"
+                android:textColor="@color/purple_700"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text='@{data.l+", "+data.c+", "+data.r+"."}'
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/black_900"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

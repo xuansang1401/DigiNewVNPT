@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Diginews</string>
+    <string name="note_sp1">DigiNews là ứng dụng đọc báo chính thức của VNPT - trang tổng hợp tin
+        tức tự động hàng đầu Việt Nam. \n Sử dụng công nghệ máy tính thông minh độc quyền của DigiNews,
+        ứng dụng cho phép bạn đọc nhanh các tin tức nóng và mới nhất trong ngày được chọn lọc từ hơn
+        150 báo điện tử tại Việt Nam.</string>
+    <string name="start">BẮT ĐẦU</string>
+    <string name="note_favorite">Vui lòng chọn \n chủ đề yêu thích của bạn</string>
+    <string name="doi_song">Đời sống</string>
+    <string name="kinh_te">Kinh tế</string>
+    <string name="suc_khoe">Sức khỏe</string>
+    <string name="xa_hoi">Xã hội</string>
+    <string name="giai_tri">Giải trí</string>
+    <string name="cong_nghe">Công nghệ</string>
+    <string name="the_thao">Thể thao</string>
+    <string name="tam_su">Tâm sự</string>
+    <string name="digimusic">DigiMusic</string>
+    <string name="note_music"><![CDATA[DigiMusic \n DigiMusic là ứng dụng nghe nhạc chất lượng cao
+     nằm trong hệ sinh thái DigiLife của VNPT. Ứng dụng hoàn toàn miễn phí dành cho các tín đồ âm nhạc.
+      Với kho nhạc đồ sộ, trình nghe nhạc đa năng hỗ trợ Lossless, bạn sẽ được thỏa sức đắm chìm trong
+      không gian âm nhạc đẳng cấp ngay trên chính thiết bị di động.
+      \n DigiMusic miễn phí hoàn toàn 3G/4G cho thuê bao VinaPhone.
+      \n DigiMusic sở hữu các tính năng nổi bật: \n  Kho nhạc: - Nghe nhạc online chất lượng cao (320kbps).
+       \n - Liên tục cập nhật các bài hát mới nổi bật cho giới
+       trẻ theo các thể loại Rock, Rap, Pop, KPop, VPop, nhạc bolero, EDM.
+       \n - Xem video chất lượng cao với nhiều độ phân giải khác nhau từ 240p đến 1080p.
+        \n  Trình chơi nhạc: - Trình chơi nhạc offline và online thông minh.
+        \n - Chơi được hầu hết các định dạng nhạc phổ biến, hỗ trợ cả nhạc lossless.
+        \n - Widget, music controller ở thanh thông báo và cả ở màn hình khóa.
+        \n  - Điều khiển nhạc thông qua tai nghe (có thể nhấn 2 lần/3 lần nút play (pause) để next/prev),
+         hiển thị thông tin bài hát lên các thiết bị Bluetooth.
+         \n - Bật ứng dụng để duyệt/phát khi nhấn vào link một bài hát/video/album/playlist/ca sỹ trên website https://mp3.zing.vn
+         \n - To/nhỏ dần âm lượng khi tiếp tục/dừng, chuyển bài.
+         \n - Hỗ trợ các hiệu ứng âm thanh, điều chỉnh bass, balance, virtualizer và reverb.
+         \n - Tìm kiếm thông minh bằng giọng nói, hỗ trợ cả tiếng Việt.
+         \n - Quản lý bài hát, playlist, yêu thích. - Tạo, quản lý và chơi nhạc theo playlist offline.
+         \n - Hiển thị đầy đủ thông tin bài hát như tên album, hình album, tên ca sỹ, tên bài hát,
+          lời bài hát cho cả nhạc offline lẫn nhạc online.\n
+           ĐIỀU KHOẢN & ĐIỀU KIỆN - Điều khoản và điều kiện đầy đủ: https://digilife.vnpt.com.vn/Termandcondition
+           \n - Chính sách quyền riêng tư: https://digilife.vnpt.com.vn/PrivacyPolicy
+           LIÊN HỆ Chúng tôi luôn mong nhận được những phản hồi từ bạn! Nếu bạn có bất kỳ góp ý,
+            câu hỏi hoặc vấn đề nào, vui lòng liên hệ với chúng tôi: Tổng đài chăm sóc khách hàng 24/24 giờ: 18001091
+             (hoàn toàn miễn phí) Website: https://digimusic.vn]]></string>
+    <string name="digiclip">DigiClip</string>
+    <string name="note_clip"><![CDATA[DigiClip DigiClip là ứng dụng Mạng xã hội video-clip nằm trong hệ sinh thái DigiLife của VNPT. Ứng dụng giúp người dùng xem, đăng tải và chia sẻ các Video/Clip/Phim HD ngắn. Với vô vàn video-clip hấp dẫn ở mọi thể loại, DigiClip mang đến cho bạn những nội dung hot được cá nhân hóa theo sở thích cùng cơ hội kiếm tiền từ các đoạn video- clip mang phong cách riêng của bạn. Tải ngay DigiClip để trải nghiệm các tính năng mới nhất: - Miễn phí Data truy cập ứng dụng; - Kho clip khủng với nhiều chủ đề: du lịch, giải trí, ăn uống, công nghệ, tin tức, giáo dục, phim truyện, nhạc, MV, thể thao, thời trang, làm đẹp, tử vi, radio, blog, TVshow..., - Liên tục cập nhật các clip đặc sắc: Hài, review công nghệ, du lịch, ăn uống, giải trí, phim ngắn, ca nhạc… được người dùng chia sẻ; - Sự kiện âm nhạc bom tấn; - Đăng tải và chia sẻ video với bạn bè mọi lúc mọi nơi, miễn phí hoàn toàn Data 3G/4G tốc độ cao cho thuê bao VinaPhone. - Tạo thu nhập khủng cho người dùng đăng tải video. - Miễn phí 100% 3G/4G cho thuê bao VinaPhone. ĐIỀU KHOẢN & ĐIỀU KIỆN - Điều khoản và điều kiện đầy đủ: https://digilife.vnpt.com.vn/Termandcondition - Chính sách quyền riêng tư: https://digilife.vnpt.com.vn/PrivacyPolicy LIÊN HỆ Chúng tôi luôn mong nhận được những phản hồi từ bạn! Nếu bạn có bất kỳ góp ý, câu hỏi hoặc vấn đề nào, vui lòng liên hệ với chúng tôi: Tổng đài chăm sóc khách hàng 24/24 giờ: 18001091 (hoàn toàn miễn phí) Website: https://digiclip.vn]]></string>
+    <string name="digihealth">DigiHealth</string>
+    <string name="note_health"><![CDATA[DigiHealth DigiHealth là ứng dụng chăm sóc và theo dõi sức khỏe dành cho mọi người nằm trong hệ sinh thái DigiLife của VNPT. Ứng dụng tích hợp nhiều tính năng y tế hữu ích và kết nối hệ thống thông tin, y bác sĩ, danh bạ từ hàng trăm bệnh viện hàng đầu Việt Nam. DigiHealth giúp bạn lắng nghe cơ thể, chủ động chăm sóc sức khỏe.  ƯU ĐIỂM NỔI BẬT - TỐI ƯU THỜI GIAN chăm sóc & theo dõi sức khoẻ. - TIẾT KIỆM CHI PHÍ - Miễn phí 100% Data 3G/4G cho thuê bao VinaPhone. - LƯU TRỮ thông tin online, tiện lợi cho việc theo dõi và cập nhật tình hình sức khỏe. - TIỆN LỢI - Nhiều tính năng theo dõi sức khỏe tiện ích. - VIDEO BÀI TẬP - Nhiều bài tập nâng cao sức khỏe. - KẾT NỐI TRỰC TIẾP người dùng với các Bác sĩ chuyên khoa, các chuyên gia y tế và sức khỏe hàng đầu Việt Nam. - DANH BẠ - Danh bạ điện thoại của hàng trăm bệnh viện hàng đầu Việt Nam. - TƯ VẤN mọi lúc mọi nơi để nhận được hỗ trợ và đánh giá khi cơ thể bạn gặp những vấn đề bất thường trong thời gian nhanh nhất. - CỘNG ĐỒNG với những thông tin chuyên môn, hữu ích, giúp bạn hiểu và biết cách quan tâm đến sức khỏe. Tải ngay app & trải nghiệm dịch vụ sức khoẻ DigiLife của VNPT để tận hưởng cuộc sống một cách khỏe mạnh, tại sao không? ĐIỀU KHOẢN & ĐIỀU KIỆN - Điều khoản và điều kiện đầy đủ: https://digilife.vnpt.com.vn/Termandcondition - Chính sách quyền riêng tư: https://digilife.vnpt.com.vn/PrivacyPolicy LIÊN HỆ Chúng tôi luôn mong nhận được những phản hồi từ bạn! Nếu bạn có bất kỳ góp ý, câu hỏi hoặc vấn đề nào, vui lòng liên hệ với chúng tôi: Tổng đài chăm sóc khách hàng 24/24 giờ: 18001091 (hoàn toàn miễn phí) Website: https://digihealth.vn]]></string>
+    <string name="note_mytv"><![CDATA[MyTV MyTV là lựa chọn hàng đầu cho người dùng khi xem truyền hình trên di động được cung cấp bởi VNPT. MyTV là một trong những ứng dụng thuộc Hệ sinh thái DigiLife của VNPT, người dùng Hệ sinh thái sẽ được trải nghiệm trọn vẹn cuộc sống số với muôn vàn tiện ích phong phú và cực nhiều ưu đãi. Đặc biệt, tất cả thuê bao VinaPhone đều sẽ được MIỄN PHÍ 3G/4G khi sử dụng chùm dịch vụ thuộc Hệ sinh thái DigiLife. Được phát triển từ dịch vụ truyền hình Internet tiên phong tại Việt Nam, MyTV sở hữu lượng kênh đa dạng bậc nhất cùng nhiều tiện ích tối ưu trải nghiệm: - Trên 225 kênh truyền hình với 70 kênh chất lượng HD, bao gồm nhiều nhóm kênh truyền hình đặc sắc, hấp dẫn như: HBO, Max by HBO, Fox, Fox Movies, Fox Sport, AXN, Disney, Cartoon Network, Disney Junior… - Các tính năng chỉ có trên truyền hình Internet: Tính năng xem lại (TVOD), tạm dừng (Time shift TV), tua đi, tua lại …, giúp người dùng có thể xem lại những chương trình ưa thích trên kênh truyền hình vào bất kỳ lúc nào. - Xem đa nền tảng với mọi thiết bị như TV, Smartphone, Tablet, dễ dàng chuyển đổi giữa các thiết bị với nội dung được đồng bộ. - Điều khiển bằng giọng nói. Tải và cài đặt MyTV ngay hôm nay để mang cả thế giới truyền hình về màn ảnh di động của bạn! ĐIỀU KHOẢN & ĐIỀU KIỆN - Điều khoản và điều kiện đầy đủ: https://digilife.vnpt.com.vn/Termandcondition - Chính sách quyền riêng tư: https://digilife.vnpt.com.vn/PrivacyPolicy LIÊN HỆ Chúng tôi luôn mong nhận được những phản hồi từ bạn! Nếu bạn có bất kỳ góp ý, câu hỏi hoặc vấn đề nào, vui lòng liên hệ với chúng tôi: Tổng đài chăm sóc khách hàng 24/24 giờ: 18001091 (hoàn toàn miễn phí) Website: https://mytv.com.vn/]]></string>
+    <string name="digimovie">DigiMovie</string>
+    <string name="note_movie"><![CDATA[Bạn đang tìm kiếm và chờ đợi thưởng thức những bộ phim, chương trình truyền hình gây sốt nhất trên thế giới? Tải ngay DigiMovie - ứng dụng xem phim mới mẻ thỏa gu các fan cinê trong hệ sinh thái DigiLife của VNPT. DigiMovie là một trong những ứng dụng thuộc Hệ sinh thái DigiLife của VNPT, người dùng Hệ sinh thái sẽ được trải nghiệm trọn vẹn cuộc sống số với muôn vàn tiện ích phong phú và cực nhiều ưu đãi. - Hơn 1.200 phim điện ảnh, hơn 4.000 tập phim bộ, hơn 3.700 nội dung thiếu nhi và hàng ngàn nội dung khác liên tục được CẬP NHẬT; - Phim độc quyền, phim bom tấn chiếu rạp và các bộ phim truyền hình nổi tiếng trong nước, quốc tế. - Đề xuất những bộ phim và chương trình truyền hình phù hợp với gu của bạn - Kho nội dung riêng cho trẻ em; - Dễ dàng xem nhanh các đoạn trích từ các phim và loạt phim, đồng thời nhận thông báo về các tập mới và video mới phát hành; - Xem bất cứ đâu với thiết bị di động: xem online hoặc tải và xem ngoại tuyến; - Các clip review đánh giá phim hấp dẫn; - Miễn phí 100% 3G/4G cho thuê bao VinaPhone ĐIỀU KHOẢN & ĐIỀU KIỆN - Điều khoản và điều kiện đầy đủ: https://digilife.vnpt.com.vn/Termandcondition - Chính sách quyền riêng tư: https://digilife.vnpt.com.vn/PrivacyPolicy LIÊN HỆ Chúng tôi luôn mong nhận được những phản hồi từ bạn! Nếu bạn có bất kỳ góp ý, câu hỏi hoặc vấn đề nào, vui lòng liên hệ với chúng tôi: Tổng đài chăm sóc khách hàng 24/24 giờ: 18001091 (hoàn toàn miễn phí) Website: http://digimovie.vn]]></string>
+    <string name="home">Trang chủ</string>
+    <string name="video">Video</string>
+    <string name="explore">Khám phá</string>
+
+
+</resources>

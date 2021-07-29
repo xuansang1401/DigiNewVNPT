@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_main.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment2"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/liveRoomFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.LiveRoomFragment"
+        android:label="LiveRoomFragment" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="title"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/networdFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.NetworkFragmentDemo"
+        android:label="NetwordFragmentDemo" >
+        <action
+            android:id="@+id/action_networdFragment_to_detailNetworkFragment"
+            app:destination="@id/detailNetworkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailNetworkFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.DetailNetworkFragment"
+        android:label="DetailNetworkFragment" />
+    <fragment
+        android:id="@+id/desginFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.DesginFragment"
+        android:label="DesginFragment" />
+</navigation>

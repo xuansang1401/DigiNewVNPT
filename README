@@ -1,0 +1,39 @@
+Các chức năng và tính năng của các packet
+1)	Data
+a.	Model
+Api: các model của network
+Db: các model của rôm
+b.	Room
+Các kích hoạt room 
+2)	Di
+Kích hoạt Hilt Android
+3)	Extensions
+Mở rộng base code trong kotlin
+4)	Network
+Kết nối mạng
+5)	Ui
+Giao diện của app
+a.	Adapter
+Adapter của RCV được viết bằng ListAdapter và DiffCallBack
+b.	Base 
+Có base fragment áp dụng Databinding và ViewModel
+ở BaseFragment 1 Fragment có thể khởi tạo 2 ViewModel
+c.	Main 
+Activity Main và ViewModelMain + Màn hình Splash
+6. View 
+Chứa các fragment
+7. Vm
+Chứa các ViewModel có 2 cách thêm VM 1 là theo chức năng 2 là theo từng fragment
+6)	Util
+Phần mở rộng của app
+
+Công nghệ ứng dụng vào Base
+1.	Sử dụng mô hình MVVM
+2.	Databinding
+3.	LiveData
+4.	RxJava
+5.	Navigation
+6.	Log
+7.	Prefs
+
+
