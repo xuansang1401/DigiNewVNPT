@@ -12,10 +12,10 @@ fun bindImageFromUrl(view: ImageView, imageUrl: String?) {
         Glide.with(view.context)
             .load(imageUrl)
             .transition(DrawableTransitionOptions.withCrossFade())
-            .error(R.drawable.ic_launcher_background)
+            .error(R.drawable.app)
             .into(view)
     } else {
-        view.setImageResource(R.drawable.ic_launcher_background)
+        view.setImageResource(R.drawable.app)
     }
 }
 

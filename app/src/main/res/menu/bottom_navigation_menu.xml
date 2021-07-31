@@ -23,18 +23,18 @@
       android:icon="@drawable/baseline_home_black_36dp"/>
 
     <item
-      android:id="@+id/liveRoomFragment"
+      android:id="@+id/videoFragment"
       android:title="@string/video"
       android:icon="@drawable/baseline_play_arrow_black_36dp"/>
 
     <item
-      android:id="@+id/networdFragment"
+      android:id="@+id/exploreFragment"
       android:title="@string/explore"
       android:icon="@drawable/baseline_flag_black_36dp"/>
 
     <item
-      android:id="@+id/desginFragment"
-      android:title="Chuyên mục"
+      android:id="@+id/categoryFragment"
+      android:title="@string/category"
       android:icon="@drawable/baseline_view_list_black_36dp"/>
 
 </menu>

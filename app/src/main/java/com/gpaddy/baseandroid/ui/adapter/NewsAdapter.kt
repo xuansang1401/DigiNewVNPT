@@ -2,57 +2,103 @@ package com.gpaddy.baseandroid.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.ViewDataBinding
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.gpaddy.baseandroid.R
-import com.gpaddy.baseandroid.data.model.api.NewsModel
+import com.gpaddy.baseandroid.data.model.api.Item
+import com.gpaddy.baseandroid.databinding.ItemNews2Binding
+import com.gpaddy.baseandroid.databinding.ItemNewsBinding
+import com.gpaddy.baseandroid.ui.fragment.HomeFragmentDirections
 
-import com.gpaddy.baseandroid.databinding.ItemDemoBinding
-import com.gpaddy.baseandroid.util.RxBus
+class NewsAdapter : ListAdapter<Item, RecyclerView.ViewHolder>(BaseDiffCallBack()) {
 
-class NewsAdapter : ListAdapter<NewsModel, RecyclerView.ViewHolder>(BaseDiffCallBack()) {
+
+    override fun getItemViewType(position: Int): Int {
+        return position % 3
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(
-            ItemDemoBinding.inflate(
-                LayoutInflater.from(parent.context), parent, false
+        if (viewType == 0) {
+            return MyViewHolder(
+                ItemNews2Binding.inflate(
+                    LayoutInflater.from(parent.context), parent, false
+                ), viewType
             )
-        )
+        }
+       return MyViewHolder(
+           ItemNewsBinding.inflate(
+               LayoutInflater.from(parent.context), parent, false
+           ),
+           viewType
+       )
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val data = getItem(position)
         (holder as MyViewHolder).bind(data)
+
     }
 
-    inner class MyViewHolder(val binding: ItemDemoBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class MyViewHolder(
+        val binding: ViewDataBinding,
+        val  viewType: Int
+    ) : RecyclerView.ViewHolder(binding.root) {
+
         init {
-            binding.setOnClickItem {
-                binding.data?.let { data ->
-                    RxBus.publish(data)
-                    it.findNavController().navigate(R.id.detailNetworkFragment)
+//
+           if (viewType==0){
+                binding as ItemNews2Binding
+                binding.setOnClickItem {view->
+                    binding.data?.let {
+                        openFragment(view.findNavController(), it)
+                    }
+                }
+            }else{
+                binding as ItemNewsBinding
+               binding.setOnClickItem {view->
+                   binding.data?.let {
+                       openFragment(view.findNavController(), it)
+                   }
+               }
+            }
+
+        }
+        fun openFragment(
+            findNavController: NavController,
+            it: Item
+        ) {
+            val dir= HomeFragmentDirections.actionHomeFragmentToNewsFragment(it)
+            findNavController.navigate(dir)
+        }
+        fun bind(data1: Item) {
+            if (viewType==0){
+                binding as ItemNews2Binding
+                binding.apply {
+                    data = data1
+                    executePendingBindings()
+                }
+            }else{
+                binding as ItemNewsBinding
+                binding.apply {
+                    data = data1
+                    executePendingBindings()
                 }
             }
-        }
-        fun bind(data1: NewsModel) {
-            binding.apply {
-                data = data1
-                executePendingBindings()
-            }
+
         }
 
     }
 
-    private class BaseDiffCallBack : DiffUtil.ItemCallback<NewsModel>() {
+    private class BaseDiffCallBack : DiffUtil.ItemCallback<Item>() {
 
-        override fun areItemsTheSame(oldItem: NewsModel, newItem: NewsModel): Boolean {
-            return oldItem.i == newItem.i
+        override fun areItemsTheSame(oldItem: Item, newItem: Item): Boolean {
+            return oldItem.title == newItem.title
         }
 
-        override fun areContentsTheSame(oldItem: NewsModel, newItem: NewsModel): Boolean {
+        override fun areContentsTheSame(oldItem: Item, newItem: Item): Boolean {
             return oldItem == newItem
         }
     }

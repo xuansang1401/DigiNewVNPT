@@ -51,6 +51,9 @@
     <string name="home">Trang chủ</string>
     <string name="video">Video</string>
     <string name="explore">Khám phá</string>
+    <string name="category">Chuyên mục</string>
+    <string name="mytv">MyTV</string>
+    <string name="vnexpress">VnExpress</string>
 
 
 </resources>

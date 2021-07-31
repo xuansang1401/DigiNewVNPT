@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:padding="@dimen/keyline_4"
-        android:text="MyTV"
+        android:text="@string/mytv"
         android:textAppearance="?attr/textAppearanceHeadline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

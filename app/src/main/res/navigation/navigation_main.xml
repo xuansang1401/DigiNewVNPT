@@ -6,44 +6,42 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.gpaddy.baseandroid.ui.fragment.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="@string/home" >
         <action
-            android:id="@+id/action_homeFragment_to_detailFragment"
-            app:destination="@id/detailFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-        <action
-            android:id="@+id/action_homeFragment_to_detailFragment2"
-            app:destination="@id/detailFragment" />
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/liveRoomFragment"
-        android:name="com.gpaddy.baseandroid.ui.fragment.LiveRoomFragment"
-        android:label="LiveRoomFragment" />
+        android:id="@+id/videoFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.VideoFragment"
+        android:label="@string/video" />
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.gpaddy.baseandroid.ui.fragment.DetailFragment"
-        android:label="DetailFragment" >
+        android:id="@+id/exploreFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.ExploreFragment"
+        android:label="@string/explore" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.CategoryFragment"
+        android:label="@string/category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.CategoryDetailFragment"
+        android:label="CategoryDetailFragment" >
+        <action
+            android:id="@+id/action_categoryDetailFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.NewsFragment"
+        android:label="NewsFragment" >
         <argument
-            android:name="title"
-            app:argType="string"/>
+            android:name="item"
+            app:argType="com.gpaddy.baseandroid.data.model.api.Item"
+            app:nullable="true"/>
     </fragment>
-    <fragment
-        android:id="@+id/networdFragment"
-        android:name="com.gpaddy.baseandroid.ui.fragment.NetworkFragmentDemo"
-        android:label="NetwordFragmentDemo" >
-        <action
-            android:id="@+id/action_networdFragment_to_detailNetworkFragment"
-            app:destination="@id/detailNetworkFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/detailNetworkFragment"
-        android:name="com.gpaddy.baseandroid.ui.fragment.DetailNetworkFragment"
-        android:label="DetailNetworkFragment" />
-    <fragment
-        android:id="@+id/desginFragment"
-        android:name="com.gpaddy.baseandroid.ui.fragment.DesginFragment"
-        android:label="DesginFragment" />
 </navigation>

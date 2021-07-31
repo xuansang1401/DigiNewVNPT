@@ -7,14 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.orhanobut.logger.Logger
 import com.gpaddy.baseandroid.BR
 import com.gpaddy.baseandroid.R
-import com.gpaddy.baseandroid.databinding.NetworkFragmentBinding
 import com.gpaddy.baseandroid.ui.adapter.NewsAdapter
 import com.gpaddy.baseandroid.base.ui.BaseFragment
 import com.gpaddy.baseandroid.base.ui.DataBindingConfig
+import com.gpaddy.baseandroid.databinding.ExploreFragmentBinding
 import com.gpaddy.baseandroid.viewmodel.HomeViewModel
 import com.gpaddy.baseandroid.viewmodel.NetworkViewModel
 
-class NetworkFragmentDemo : BaseFragment(){
+class ExploreFragment : BaseFragment(){
     private lateinit var mViewModel: NetworkViewModel
     private lateinit var mState: HomeViewModel
 
@@ -25,7 +25,7 @@ class NetworkFragmentDemo : BaseFragment(){
 
     override fun getDataBindingConfig(): DataBindingConfig {
         return DataBindingConfig(
-            R.layout.network_fragment,
+            R.layout.explore_fragment,
             BR.vm,
             mViewModel
         )
@@ -33,20 +33,23 @@ class NetworkFragmentDemo : BaseFragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val binding = mBinding as NetworkFragmentBinding
+        val binding = mBinding as ExploreFragmentBinding
 //        val divider = MaterialDividerItemDecoration(context!!, LinearLayoutManager.VERTICAL )
-
-        binding.rcvNews.apply {
-            layoutManager=LinearLayoutManager(context)
-            adapter=NewsAdapter()
+        binding.btnClip.setOnClickListener{
 
         }
-        Logger.d("\"sss: ${mState.data.value.toString()}\"")
-        mDisposable.addAll(mViewModel.getNews())
+        binding.btnHealth.setOnClickListener{
 
-        mViewModel.liveData.observe(viewLifecycleOwner, Observer {
-            (binding.rcvNews.adapter as NewsAdapter).submitList(it)
-        })
+        }
+        binding.btnMovie.setOnClickListener{
+
+        }
+        binding.btnMusic.setOnClickListener{
+
+        }
+        binding.btnMytv.setOnClickListener{
+
+        }
 
     }
 

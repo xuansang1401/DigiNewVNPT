@@ -1,6 +1,7 @@
 package com.gpaddy.baseandroid.di
 
 import com.gpaddy.baseandroid.network.NetworkRequest
+import com.gpaddy.baseandroid.network.VideoRequest
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,7 +14,12 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun providesAudioRequest(): NetworkRequest {
+    fun providesNetworkRequest(): NetworkRequest {
         return NetworkRequest.create()
+    }
+    @Singleton
+    @Provides
+    fun providesVideoRequest(): VideoRequest {
+        return VideoRequest.create()
     }
 }
