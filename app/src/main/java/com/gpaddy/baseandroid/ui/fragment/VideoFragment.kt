@@ -31,7 +31,7 @@ class VideoFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         val binding=mBinding as VideoFragmentBinding
 
-        val videoAdapter= VideoAdapter()
+        val videoAdapter= VideoAdapter(1)
         binding.rcvVideo.apply {
             layoutManager= LinearLayoutManager(context)
             adapter= videoAdapter

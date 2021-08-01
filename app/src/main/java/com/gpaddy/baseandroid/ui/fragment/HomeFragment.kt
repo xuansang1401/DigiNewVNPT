@@ -48,12 +48,11 @@ class HomeFragment : BaseFragment() {
     }
 
     inner class ClickProxy {
-        fun addData() {
-
+        fun openAccount() {
 
         }
 
-        fun openFragment(){
+        fun openSearch(){
 //
         }
     }

@@ -8,33 +8,56 @@
         android:name="com.gpaddy.baseandroid.ui.fragment.HomeFragment"
         android:label="@string/home" >
         <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             android:id="@+id/action_homeFragment_to_newsFragment"
             app:destination="@id/newsFragment" />
     </fragment>
     <fragment
         android:id="@+id/videoFragment"
         android:name="com.gpaddy.baseandroid.ui.fragment.VideoFragment"
-        android:label="@string/video" />
+        android:label="@string/video" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_videoFragment_to_videoDetailFragment"
+            app:destination="@id/videoDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/exploreFragment"
         android:name="com.gpaddy.baseandroid.ui.fragment.ExploreFragment"
-        android:label="@string/explore" />
+        android:label="@string/explore" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_exploreFragment_to_exploreDetailFragment"
+            app:destination="@id/exploreDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.gpaddy.baseandroid.ui.fragment.CategoryFragment"
         android:label="@string/category" >
         <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             android:id="@+id/action_categoryFragment_to_newsFragment"
             app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/categoryDetailFragment"
         android:name="com.gpaddy.baseandroid.ui.fragment.CategoryDetailFragment"
-        android:label="CategoryDetailFragment" >
-        <action
-            android:id="@+id/action_categoryDetailFragment_to_newsFragment"
-            app:destination="@id/newsFragment" />
-    </fragment>
+        android:label="CategoryDetailFragment" />
     <fragment
         android:id="@+id/newsFragment"
         android:name="com.gpaddy.baseandroid.ui.fragment.NewsFragment"
@@ -43,5 +66,43 @@
             android:name="item"
             app:argType="com.gpaddy.baseandroid.data.model.api.Item"
             app:nullable="true"/>
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/newsFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_newsFragment_self"
+            app:destination="@id/newsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/videoDetailFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.VideoDetailFragment"
+        android:label="VideoDetailFragment" >
+        <argument
+            android:name="item"
+            app:argType="com.gpaddy.baseandroid.data.model.api.Data"
+            app:nullable="true"/>
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_videoDetailFragment_self"
+            app:destination="@id/videoDetailFragment"
+            app:popUpTo="@+id/videoDetailFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/exploreDetailFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.ExploreDetailFragment"
+        android:label="ExploreDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+    </fragment>
+
 </navigation>

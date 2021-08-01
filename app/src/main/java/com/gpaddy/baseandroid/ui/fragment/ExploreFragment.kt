@@ -35,22 +35,30 @@ class ExploreFragment : BaseFragment(){
         super.onViewCreated(view, savedInstanceState)
         val binding = mBinding as ExploreFragmentBinding
 //        val divider = MaterialDividerItemDecoration(context!!, LinearLayoutManager.VERTICAL )
-        binding.btnClip.setOnClickListener{
-
-        }
-        binding.btnHealth.setOnClickListener{
-
-        }
         binding.btnMovie.setOnClickListener{
+            openFragmentDetail(0)
+        }
+        binding.btnClip.setOnClickListener{
+            openFragmentDetail(1)
 
         }
         binding.btnMusic.setOnClickListener{
+            openFragmentDetail(2)
+
+        }
+        binding.btnHealth.setOnClickListener{
+            openFragmentDetail(3)
 
         }
         binding.btnMytv.setOnClickListener{
+            openFragmentDetail(4)
 
         }
+    }
 
+    fun openFragmentDetail(id: Int){
+        val dir= ExploreFragmentDirections.actionExploreFragmentToExploreDetailFragment(id)
+        nav().navigate(dir)
     }
 
 

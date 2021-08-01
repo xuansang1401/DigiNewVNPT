@@ -36,7 +36,7 @@ class CategoryDetailFragment(val categoryModel: CategoryModel) : BaseFragment(){
 
         val binding = mBinding as CatetgoryDetailFragmentBinding
 
-        val newsAdapter= CategoryNewsAdapter()
+        val newsAdapter= CategoryNewsAdapter(1)
         binding.rvcNews.apply {
             layoutManager= LinearLayoutManager(context)
             adapter= newsAdapter

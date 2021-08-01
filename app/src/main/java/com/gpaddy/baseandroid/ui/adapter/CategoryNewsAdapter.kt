@@ -11,12 +11,12 @@ import com.gpaddy.baseandroid.base.ui.DataBindingFragment
 import com.gpaddy.baseandroid.data.model.api.Item
 import com.gpaddy.baseandroid.databinding.ItemNews2Binding
 import com.gpaddy.baseandroid.databinding.ItemNewsBinding
-import com.gpaddy.baseandroid.ui.fragment.CategoryDetailFragmentDirections
 import com.gpaddy.baseandroid.ui.fragment.CategoryFragmentDirections
 import com.gpaddy.baseandroid.ui.fragment.HomeFragmentDirections
+import com.gpaddy.baseandroid.ui.fragment.NewsFragmentDirections
 import com.gpaddy.baseandroid.util.RxBus
 
-class CategoryNewsAdapter : ListAdapter<Item, RecyclerView.ViewHolder>(BaseDiffCallBack()) {
+class CategoryNewsAdapter(val status: Int) : ListAdapter<Item, RecyclerView.ViewHolder>(BaseDiffCallBack()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
@@ -37,12 +37,22 @@ class CategoryNewsAdapter : ListAdapter<Item, RecyclerView.ViewHolder>(BaseDiffC
     ) : RecyclerView.ViewHolder(binding.root) {
 
         init {
-            binding.setOnClickItem {view->
-                binding.data?.let {
-                    val dir= CategoryFragmentDirections.actionCategoryFragmentToNewsFragment(it)
-                    view.findNavController().navigate(dir)
+            if (status==1){
+                binding.setOnClickItem {view->
+                    binding.data?.let {
+                        val dir= CategoryFragmentDirections.actionCategoryFragmentToNewsFragment(it)
+                        view.findNavController().navigate(dir)
+                    }
+                }
+            }else{
+                binding.setOnClickItem {view->
+                    binding.data?.let {
+                        val dir= NewsFragmentDirections.actionNewsFragmentSelf(it)
+                        view.findNavController().navigate(dir)
+                    }
                 }
             }
+
         }
 
         fun bind(data1: Item) {

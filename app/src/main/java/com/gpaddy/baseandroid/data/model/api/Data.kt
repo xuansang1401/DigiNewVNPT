@@ -1,5 +1,9 @@
 package com.gpaddy.baseandroid.data.model.api
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Data(
     val channel: String,
     val id: Int,
@@ -8,4 +12,4 @@ data class Data(
     val published_at: Int,
     val title: String,
     val video_id: String
-)
+): Parcelable

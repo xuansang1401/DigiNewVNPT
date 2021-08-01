@@ -25,34 +25,40 @@
            android:id="@+id/linearLayout2"
            android:layout_width="match_parent"
            android:layout_height="56dp"
-
            android:orientation="horizontal"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintVertical_bias="0.0">
+          >
 
            <ImageView
-               android:layout_width="128dp"
+               android:layout_marginStart="@dimen/keyline_2"
+               android:id="@+id/imageView2"
+               android:layout_width="130dp"
                android:layout_height="56dp"
-               android:layout_marginStart="@dimen/keyline_4"
-               android:src="@drawable/app" />
-
-           <Button
-               style="?attr/materialButtonStyle"
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               app:icon="@drawable/ic_search_control_normal_24dp"
-
+               android:src="@drawable/app"
                />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="56dp"
+               android:orientation="horizontal"
+               android:gravity="end"
+               >
+               <Button
+                   android:onClick="@{()->click.openSearch()}"
+                   android:id="@+id/button"
+                   app:icon="@drawable/ic_search_control_normal_24dp"
 
-           <Button
-               style="?attr/materialButtonStyle"
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               app:icon="@drawable/ic_bookmark_control_normal_24dp"
+               style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   />
 
-               />
+               <Button
+                   android:onClick="@{()->click.openAccount()}"
+                   style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   app:icon="@drawable/baseline_account_circle_black_36dp" />
+           </LinearLayout>
+
        </LinearLayout>
        <ProgressBar
            android:layout_width="30dp"

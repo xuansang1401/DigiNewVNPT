@@ -43,7 +43,7 @@ class NewsFragment : BaseFragment() {
         val item = newsArgs.item ?: return
         binding.tvTitle.text = item.title
         binding.webView.loadData(item.description, "text/html", "utf-8")
-        val adapte = CategoryNewsAdapter()
+        val adapte = CategoryNewsAdapter(9)
         binding.rcvNews.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = adapte
@@ -52,6 +52,9 @@ class NewsFragment : BaseFragment() {
         viewModel.newsData.observe(viewLifecycleOwner, Observer {
             adapte.submitList(it.items)
         })
+        binding.btnBack.setOnClickListener {
+            nav().navigateUp()
+        }
     }
 
 //    inner class ClickProxy {
