@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 import com.gpaddy.baseandroid.data.model.api.Item
 
 @Entity
-data class HistoryModel(
-    @PrimaryKey val id_his: String,
+data class FavoriteModel(
+    @PrimaryKey val id_fav: String,
     @Embedded val news : Item,
     val time:Long,
 )

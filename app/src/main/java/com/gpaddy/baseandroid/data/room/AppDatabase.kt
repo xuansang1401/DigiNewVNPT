@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.gpaddy.baseandroid.data.model.db.Bookmark
+import com.gpaddy.baseandroid.data.model.db.DownloadModel
+import com.gpaddy.baseandroid.data.model.db.FavoriteModel
 import com.gpaddy.baseandroid.data.model.db.HistoryModel
 
 @Database(version = 2, exportSchema = false,
-    entities = [HistoryModel::class])
+    entities = [HistoryModel::class, Bookmark::class, DownloadModel::class, FavoriteModel::class])
 abstract class AppDatabase : RoomDatabase() {
     abstract fun databaseDao(): DatabaseDao
     companion object {

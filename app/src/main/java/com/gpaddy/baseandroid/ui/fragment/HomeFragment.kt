@@ -45,11 +45,13 @@ class HomeFragment : BaseFragment() {
         viewModel.newsData.observe(viewLifecycleOwner, Observer {
             adapte.submitList(it.items)
         })
+        binding.button
     }
 
     inner class ClickProxy {
         fun openAccount() {
-
+            val dir= HomeFragmentDirections.actionHomeFragmentToAccountFragment()
+            nav().navigate(dir)
         }
 
         fun openSearch(){

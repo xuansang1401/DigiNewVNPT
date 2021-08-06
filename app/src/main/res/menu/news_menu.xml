@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/click_bookmark"
+        android:title="Lưu tin" />
+    <item
+        android:id="@+id/click_save"
+        android:title="Tải tin" />
+    <item
+        android:id="@+id/click_fav"
+        android:title="Yêu thích" />
+
+</menu>

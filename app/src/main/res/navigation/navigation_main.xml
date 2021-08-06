@@ -14,6 +14,13 @@
             app:popExitAnim="@anim/slide_out_right"
             android:id="@+id/action_homeFragment_to_newsFragment"
             app:destination="@id/newsFragment" />
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_homeFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
     </fragment>
     <fragment
         android:id="@+id/videoFragment"
@@ -103,6 +110,42 @@
             app:argType="integer"
             android:defaultValue="0"
             />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.AccountFragment"
+        android:label="AccountFragment" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_accountFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_accountFragment_to_listNewsFragment"
+            app:destination="@id/listNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listNewsFragment"
+        android:name="com.gpaddy.baseandroid.ui.fragment.ListNewsFragment"
+        android:label="ListNewsFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_listNewsFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
     </fragment>
 
 </navigation>
