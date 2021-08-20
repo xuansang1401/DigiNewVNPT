@@ -47,7 +47,6 @@ class HomeFragment : BaseFragment() {
         })
         binding.button
     }
-
     inner class ClickProxy {
         fun openAccount() {
             val dir= HomeFragmentDirections.actionHomeFragmentToAccountFragment()
@@ -58,4 +57,15 @@ class HomeFragment : BaseFragment() {
 //
         }
     }
+
+//    inner class ClickProxy {
+//        fun openAccount() {
+//            val dir= HomeFragmentDirections.actionHomeFragmentToAccountFragment()
+//            nav().navigate(dir)
+//        }
+//
+//        fun openSearch(){
+////
+//        }
+//    }
 }
