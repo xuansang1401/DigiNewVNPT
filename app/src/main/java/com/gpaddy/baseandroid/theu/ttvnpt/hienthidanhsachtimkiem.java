@@ -11,6 +11,7 @@
 
  import androidx.appcompat.app.AppCompatActivity;
  import androidx.appcompat.widget.Toolbar;
+ import androidx.recyclerview.widget.DividerItemDecoration;
  import androidx.recyclerview.widget.LinearLayoutManager;
  import androidx.recyclerview.widget.RecyclerView;
 
@@ -49,13 +50,7 @@ Toolbar toolbar;
         String kw=intent.getStringExtra("keysearch");//.getString("keysearch");
         edsearch.setHint(kw);
         ArrayList<Article> articles= (ArrayList<Article>) intent.getSerializableExtra("list");
-           // adapter=new dstimkiemAdapter(getApplicationContext(),articles);
-          Toast.makeText(getApplicationContext(),articles.get(0).getPublishedAt().toString()+"",Toast.LENGTH_LONG).show();
-
-//          recy.setHasFixedSize(true);
-//            recy.setAdapter(adapter);
-//            adapter.notifyDataSetChanged();
-
+//          Toast.makeText(getApplicationContext(),articles.get(0).getPublishedAt().toString()+"",Toast.LENGTH_LONG).show();
 
         String[]data={"Năm nay","2020","2019","2018"};
         ArrayAdapter<String>arrayAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,data);
@@ -86,8 +81,11 @@ Toolbar toolbar;
                     recy.setHasFixedSize(true);
                     recy.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
+                     RecyclerView.ItemDecoration itemDecoration=new DividerItemDecoration(getApplicationContext(),DividerItemDecoration.VERTICAL);
+                     recy.addItemDecoration(itemDecoration);
 
-            }
+
+     }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {

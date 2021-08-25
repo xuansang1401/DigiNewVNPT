@@ -86,7 +86,7 @@ public class ItemHoler extends RecyclerView.ViewHolder {
     }
 }
     public void LoadJson(String keyword) {
-        ApiInterface apiInterface = ApiClient.getApiClientSearch().create(ApiInterface.class);
+        ApiInterface apiInterface = ApiClient.getInstance().getClient2().create(ApiInterface.class);
         Call<News> call;
 
         call=apiInterface.getNews(keyword,"vi","vnexpress.net",apiKey);

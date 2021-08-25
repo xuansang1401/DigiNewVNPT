@@ -76,5 +76,28 @@
         android:textColor="@color/black_800"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recytukhoahotchitiet"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Tim mới nhất"
+                android:textSize="30sp"
+                android:textColor="@color/black_800"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recychitiettin"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"></androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

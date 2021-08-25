@@ -56,37 +56,37 @@ RecyclerView recyclerView;
         b1=findViewById(R.id.bttk);
         b2=findViewById(R.id.canhan);
 
-        layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
+//        layoutManager = new LinearLayoutManager(getApplicationContext());
+//        recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<String>arr=new ArrayList<>();
-        arr.add("Covid");
-        arr.add("aadff");
-        arr.add("ha noi");
-        arr.add("BTS");
-        arr.add("Jin");
-        arr.add("RM");
-        arr.add("Suga");
-        arr.add("Jhope");
-        arr.add("Jimin");
-        arr.add("Taehyung");
-        arr.add("JK");
-        arr.add("Covid");
+//        ArrayList<String>arr=new ArrayList<>();
+//        arr.add("Covid");
+//        arr.add("aadff");
+//        arr.add("ha noi");
+//        arr.add("BTS");
+//        arr.add("Jin");
+//        arr.add("RM");
+//        arr.add("Suga");
+//        arr.add("Jhope");
+//        arr.add("Jimin");
+//        arr.add("Taehyung");
+//        arr.add("JK");
+//        arr.add("Covid");
+//
+//        Calendar calendar=Calendar.getInstance();
+//        SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yyyy", Locale.CHINA);
+//        String currentDate=dateFormat.format(calendar.getTime());
+//        //Toast.makeText(getApplicationContext(),currentDate,Toast.LENGTH_LONG).show();
+//
+//        calendar.setTime(Calendar.getInstance().getTime());
+//        calendar.add(Calendar.DAY_OF_MONTH,-1);
+//        String yesterday=dateFormat.format(calendar.getTime());
 
-        Calendar calendar=Calendar.getInstance();
-        SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yyyy", Locale.CHINA);
-        String currentDate=dateFormat.format(calendar.getTime());
-        //Toast.makeText(getApplicationContext(),currentDate,Toast.LENGTH_LONG).show();
 
-        calendar.setTime(Calendar.getInstance().getTime());
-        calendar.add(Calendar.DAY_OF_MONTH,-1);
-        String yesterday=dateFormat.format(calendar.getTime());
-
-
-        ArrayList<String> a= (ArrayList<String>) DatabaseNews.getInstance(getApplicationContext()).daoNews().getTimeDown();
-        for(int i=0;i<a.size();i++){
-            Toast.makeText(getApplicationContext(),"Thoi gian da xem"+a.get(i),Toast.LENGTH_LONG).show();
-        }
+//        ArrayList<String> a= (ArrayList<String>) DatabaseNews.getInstance(getApplicationContext()).daoNews().getTimeDown();
+//        for(int i=0;i<a.size();i++){
+//            Toast.makeText(getApplicationContext(),"Thoi gian da xem"+a.get(i),Toast.LENGTH_LONG).show();
+//        }
        //
 
 

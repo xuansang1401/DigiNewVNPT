@@ -28,4 +28,10 @@ public interface ApiInterface {
             @Query("domains") String domains,
             @Query("apiKey") String apiKey
     );
+    @GET("/api/city")
+    Call<diaphuong>getTinh();
+
+
+    @GET("v2/everything")
+    Call<News> getTinMoi(@Query("domains") String domains,@Query("apiKey") String apiKey);
 }

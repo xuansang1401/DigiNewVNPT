@@ -66,7 +66,7 @@ public class ItemHoler extends RecyclerView.ViewHolder {
                 themCM.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(context,"chon THem CM roi nha",Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context,"chon THem CM roi nha",Toast.LENGTH_SHORT).show();
                         themCM.setText("Đã thêm");
                         DatabaseNews.getInstance(context).daoNews().insertDM(danhmuc.get(getAdapterPosition()));
                         themCM.setEnabled(false);

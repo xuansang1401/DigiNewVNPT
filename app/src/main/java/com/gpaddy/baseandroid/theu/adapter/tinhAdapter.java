@@ -26,13 +26,8 @@ import java.util.ArrayList;
 
 public class tinhAdapter extends RecyclerView.Adapter<tinhAdapter.ItemViewHolder>{
     ArrayList <String> arrayListTinh;
-    //Context context;
     IClickListener iClickListener;
-    String data;
-    int vtri;
     ArrayList<ItemViewHolder> dsholder=new ArrayList<>();
-    ItemViewHolder holder1;
-    SharedPreferences sharedPreferences;//=getSharedPreferences("tindp",MODE_PRIVATE);
 
 
     public tinhAdapter(ArrayList<String> arrayListTinh, IClickListener iClickListener) {
@@ -50,49 +45,39 @@ public class tinhAdapter extends RecyclerView.Adapter<tinhAdapter.ItemViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
-        data= DataLocalManager.getFirstInstall();
-            final String tinh=arrayListTinh.get(position);
-            if(tinh==null){
-                return;
-            }
-            dsholder.add(holder);
+        final String tinh=arrayListTinh.get(position);
+        final String data= DataLocalManager.getFirstInstall();
+        if(tinh==null){
+            return;
+        }
+        dsholder.add(holder);
+        holder.check.setVisibility(View.INVISIBLE);
 
-            holder.tv.setText(tinh);
-            if(data!=null){
-            if(data.equals(holder.tv.getText().toString())) {
+        holder.tv.setText(tinh);
+        if(data!=null){
+            if(data.equals(tinh)) {
+                // Toast.makeText(context)
                 holder.check.setVisibility(View.VISIBLE);
-                holder1 = holder;
-                //
             }
 
-            }
-            holder.tv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    //ItemViewHolder holder1;
+        }
 
 
-                    for(int i=0;i<dsholder.size();i++){
-                        dsholder.get(i).check.setVisibility(View.INVISIBLE);
-                    }
-//                    if(!data.equals(holder.tv.getText().toString())&& data!=null){
-//                        holder1.check.setVisibility(View.INVISIBLE);
-//                    }
-                    iClickListener.clickIem(tinh);
-                    holder.check.setVisibility(View.VISIBLE);
-
-
+        holder.tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i=0;i<dsholder.size();i++){
+                    dsholder.get(i).check.setVisibility(View.INVISIBLE);
                 }
-            });
+                holder.check.setVisibility(View.VISIBLE);
+                iClickListener.clickIem(tinh);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        if(arrayListTinh!=null)
-            return  arrayListTinh.size();
-
-        return 0;
+        return  arrayListTinh.size();
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder{
