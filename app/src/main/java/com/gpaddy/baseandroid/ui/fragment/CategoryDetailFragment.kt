@@ -1,5 +1,6 @@
 package com.gpaddy.baseandroid.ui.fragment
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
@@ -12,12 +13,16 @@ import com.gpaddy.baseandroid.base.ui.DataBindingConfig
 import com.gpaddy.baseandroid.data.model.CategoryModel
 import com.gpaddy.baseandroid.databinding.CategoryFragmentBinding
 import com.gpaddy.baseandroid.databinding.CatetgoryDetailFragmentBinding
+import com.gpaddy.baseandroid.theu.model.cataModel
 import com.gpaddy.baseandroid.ui.adapter.CategoryNewsAdapter
 import com.gpaddy.baseandroid.ui.adapter.NewsAdapter
 import com.gpaddy.baseandroid.viewmodel.CategoryViewModel
 import com.gpaddy.baseandroid.viewmodel.HomeViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 
-class CategoryDetailFragment(val categoryModel: CategoryModel) : BaseFragment(){
+class CategoryDetailFragment(val categoryModel: cataModel,
+
+) : BaseFragment(){
     private lateinit var viewModel: CategoryViewModel
     override fun initViewModel() {
         viewModel=getFragmentScopeViewModel(CategoryViewModel::class.java)

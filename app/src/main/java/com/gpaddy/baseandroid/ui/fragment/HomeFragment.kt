@@ -1,18 +1,17 @@
 package com.gpaddy.baseandroid.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.orhanobut.logger.Logger
-import com.pixplicity.easyprefs.library.Prefs
 import com.gpaddy.baseandroid.BR
 import com.gpaddy.baseandroid.R
 import com.gpaddy.baseandroid.base.ui.BaseFragment
 import com.gpaddy.baseandroid.base.ui.DataBindingConfig
 import com.gpaddy.baseandroid.databinding.HomeFragmentBinding
-import com.gpaddy.baseandroid.databinding.HomeFragmentBindingImpl
+import com.gpaddy.baseandroid.theu.ttvnpt.timkiem
+import com.gpaddy.baseandroid.ui.activity.MainActivity
 import com.gpaddy.baseandroid.ui.adapter.NewsAdapter
 import com.gpaddy.baseandroid.viewmodel.HomeViewModel
 
@@ -55,7 +54,8 @@ class HomeFragment : BaseFragment() {
         }
 
         fun openSearch(){
-//
+            val intent = Intent( context, timkiem::class.java)
+            startActivity(intent)
         }
     }
 }

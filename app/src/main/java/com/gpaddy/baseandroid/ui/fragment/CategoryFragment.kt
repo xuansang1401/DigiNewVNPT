@@ -10,6 +10,7 @@ import com.gpaddy.baseandroid.base.ui.BaseFragment
 import com.gpaddy.baseandroid.base.ui.DataBindingConfig
 import com.gpaddy.baseandroid.data.model.CategoryModel
 import com.gpaddy.baseandroid.databinding.CategoryFragmentBinding
+import com.gpaddy.baseandroid.theu.model.cataModel
 import com.gpaddy.baseandroid.ui.adapter.CategoryPagerAdapter
 import com.gpaddy.baseandroid.viewmodel.CategoryViewModel
 
@@ -44,10 +45,10 @@ class CategoryFragment : BaseFragment() {
         }.attach()
         // Set up the RecyclerView
     }
-    private fun getTabTitle(position: Int, listCategory: MutableList<CategoryModel>): String{
+    private fun getTabTitle(position: Int, listCategory: MutableList<cataModel>): String{
 
         return when (position) {
-            position -> listCategory[position].name
+            position -> listCategory[position].tenDMuc
             else -> getString(R.string.home)
         }
     }

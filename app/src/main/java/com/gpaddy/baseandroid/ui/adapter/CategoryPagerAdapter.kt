@@ -19,10 +19,11 @@ package com.gpaddy.baseandroid.ui.adapter
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.gpaddy.baseandroid.data.model.CategoryModel
+import com.gpaddy.baseandroid.theu.model.cataModel
 import com.gpaddy.baseandroid.ui.fragment.CategoryDetailFragment
 
 
-class CategoryPagerAdapter(fragment: Fragment,val listCategory: MutableList<CategoryModel>) : FragmentStateAdapter(fragment) {
+class CategoryPagerAdapter(fragment: Fragment,val listCategory: MutableList<cataModel>) : FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int {
         return listCategory.size
     }

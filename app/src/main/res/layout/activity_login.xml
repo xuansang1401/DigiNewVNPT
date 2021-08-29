@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginTop="@dimen/keyline_4"
+            android:layout_marginStart="@dimen/keyline_4"
+
+            android:layout_marginEnd="@dimen/keyline_4"
+
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/app"
+            />
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black_900"-->
+<!--            android:textSize="20sp"-->
+<!--            android:text="Đăng nhập Ai học giỏi để có \ntrải nghiệm tốt nhất"-->
+<!--            />nhất-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            app:cardCornerRadius="20sp"
+            app:cardBackgroundColor="@color/blue_800"
+            android:layout_height="40dp">
+            <TextView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/btn_facebook"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Facebook"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white_50"
+
+                />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            app:cardCornerRadius="20sp"
+            app:cardBackgroundColor="@color/red_600"
+            android:layout_height="40dp">
+            <TextView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/btn_google"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Google"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white_50"
+
+                />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</layout>

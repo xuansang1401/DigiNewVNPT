@@ -2,6 +2,7 @@ package com.gpaddy.baseandroid
 
 import android.app.Application
 import android.content.ContextWrapper
+import com.gpaddy.baseandroid.theu.DAO.DataLocalManager
 import com.pixplicity.easyprefs.library.Prefs
 import dagger.hilt.android.HiltAndroidApp
 
@@ -15,5 +16,8 @@ class MainApplication : Application(){
             .setPrefsName(packageName)
             .setUseDefaultSharedPreference(true)
             .build()
+
+        DataLocalManager.init(applicationContext)
+
     }
 }

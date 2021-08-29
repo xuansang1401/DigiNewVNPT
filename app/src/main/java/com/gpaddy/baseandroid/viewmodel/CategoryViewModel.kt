@@ -1,19 +1,25 @@
 package com.gpaddy.baseandroid.viewmodel
 
+import android.content.Context
 import android.util.Log
 import androidx.databinding.ObservableBoolean
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.gpaddy.baseandroid.data.model.CategoryModel
+import com.gpaddy.baseandroid.R
 import com.gpaddy.baseandroid.data.model.api.NewsModel
 import com.gpaddy.baseandroid.network.NetworkRequest
+import com.gpaddy.baseandroid.theu.DAO.DatabaseNews
+import com.gpaddy.baseandroid.theu.model.cataModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import java.util.*
 
 class CategoryViewModel @ViewModelInject constructor(
-    private val networkRequest: NetworkRequest
+    private val networkRequest: NetworkRequest,
+    @ApplicationContext val context: Context
 ) : ViewModel() {
     //    Thế giới RSS
 //    Thời sự RSS
@@ -31,16 +37,32 @@ class CategoryViewModel @ViewModelInject constructor(
 
     val isLoadItem= ObservableBoolean(false)
     val newsData= MutableLiveData<NewsModel>()
-    fun getListCategory(): MutableList<CategoryModel> {
-        val list = mutableListOf<CategoryModel>()
-        list.add(CategoryModel(0, "Thế giới", "https://vnexpress.net/rss/the-gioi.rss"))
-        list.add(CategoryModel(1, "Thời sự", "https://vnexpress.net/rss/thoi-su.rss"))
-        list.add(CategoryModel(2, "Kinh doanh", "https://vnexpress.net/rss/kinh-doanh.rss"))
-        list.add(CategoryModel(3, "Startup", "https://vnexpress.net/rss/startup.rss"))
-        list.add(CategoryModel(4, "Giải trí", "https://vnexpress.net/rss/giai-tri.rss"))
-        list.add(CategoryModel(5, "Thể thao", "https://vnexpress.net/rss/the-thao.rss"))
-        list.add(CategoryModel(6, "Pháp luật", "https://vnexpress.net/rss/phap-luat.rss"))
-        list.add(CategoryModel(7, "Giáo dục", "https://vnexpress.net/rss/giao-duc.rss"))
+    fun getListCategory(): MutableList<cataModel> {
+        //
+//        arr.add(new cataModel("Xu hướng", R.drawable.danhmuc));
+//        arr.add(new cataModel("Xã hội", R.drawable.xahoi));
+//        arr.add(new cataModel("Sức Khỏe", R.drawable.sk));
+//        arr.add(new cataModel("Văn hóa", R.drawable.danhmuc));
+//        arr.add(new cataModel("Giải trí", R.drawable.xahoi));
+//        arr.add(new cataModel("Giáo dục", R.drawable.danhmuc));
+//        arr.add(new cataModel("Thể thao", R.drawable.danhmuc));
+//        arr.add(new cataModel("Tâm sự", R.drawable.tamsu));
+//        arr.add(new cataModel("Truyện đọc", R.drawable.danhmuc));
+//        arr.add(new cataModel("Bảng tin", R.drawable.danhmuc));
+//        arr.add(new cataModel("Công nghệ", R.drawable.congnghe));
+//        arr.add(new cataModel("Đời sống", R.drawable.doisong));
+
+        val t=DatabaseNews.getInstance(context).daoNews().getListDM()
+        if (!t.isNullOrEmpty()) return t
+        val list = mutableListOf<cataModel>()
+        list.add(cataModel("Thế giới", R.drawable.danhmuc, "https://vnexpress.net/rss/the-gioi.rss"))
+        list.add(cataModel( "Thời sự",R.drawable.danhmuc, "https://vnexpress.net/rss/thoi-su.rss"))
+        list.add(cataModel("Kinh doanh",R.drawable.danhmuc,  "https://vnexpress.net/rss/kinh-doanh.rss"))
+        list.add(cataModel( "Startup",R.drawable.danhmuc,  "https://vnexpress.net/rss/startup.rss"))
+        list.add(cataModel("Giải trí", R.drawable.danhmuc, "https://vnexpress.net/rss/giai-tri.rss"))
+        list.add(cataModel( "Thể thao", R.drawable.danhmuc, "https://vnexpress.net/rss/the-thao.rss"))
+        list.add(cataModel( "Pháp luật",R.drawable.danhmuc,  "https://vnexpress.net/rss/phap-luat.rss"))
+        list.add(cataModel( "Giáo dục",R.drawable.danhmuc,  "https://vnexpress.net/rss/giao-duc.rss"))
 
         return list
     }

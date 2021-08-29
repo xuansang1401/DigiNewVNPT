@@ -55,5 +55,9 @@
     <string name="mytv">MyTV</string>
     <string name="vnexpress">VnExpress</string>
 
+    <string name="facebook_app_id">384589946266144</string>
+    <string name="fb_login_protocol_scheme">fb384589946266144</string>
+
+
 
 </resources>
