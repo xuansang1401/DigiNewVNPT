@@ -15,6 +15,7 @@
     <string name="the_thao">Thể thao</string>
     <string name="tam_su">Tâm sự</string>
     <string name="digimusic">DigiMusic</string>
+
     <string name="note_music"><![CDATA[DigiMusic \n DigiMusic là ứng dụng nghe nhạc chất lượng cao
      nằm trong hệ sinh thái DigiLife của VNPT. Ứng dụng hoàn toàn miễn phí dành cho các tín đồ âm nhạc.
       Với kho nhạc đồ sộ, trình nghe nhạc đa năng hỗ trợ Lossless, bạn sẽ được thỏa sức đắm chìm trong
@@ -54,6 +55,12 @@
     <string name="category">Chuyên mục</string>
     <string name="mytv">MyTV</string>
     <string name="vnexpress">VnExpress</string>
+
+
+
+    <string name="popup_4">Tải ngay ứng dụng DIGILIFE \n Để trải nghiệm trọn vẹn \n cuộc sống số</string>
+    <string name="popup_5">Tải ngay ứng dụng DIGILIFE \n Để hưởng ưu đãi miễn phí data khi \n truy cập ứng dụng DIGI</string>
+    <string name="popup"><u>Tham khảo các gói cước khác</u></string>
 
 
 </resources>
